@@ -1,0 +1,268 @@
+/* FormFree - Estilos Públicos */
+
+.formfree-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.formfree-wrapper {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Barra de progreso */
+.formfree-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.formfree-progress-fill {
+    height: 100%;
+    background: #10b981;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Indicador de pasos */
+.formfree-step-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.formfree-step-indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e5e7eb;
+    z-index: 0;
+}
+
+.formfree-step-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.formfree-step-dot.active {
+    background: #aaca35;
+    color: white;
+}
+
+.formfree-step-dot.completed {
+    background: #aaca35;
+    color: white;
+}
+
+/* Pasos del formulario */
+.formfree-step {
+    display: none;
+}
+
+.formfree-step.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.formfree-step-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Campos del formulario */
+.formfree-field-group {
+    margin-bottom: 20px;
+}
+
+.formfree-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.formfree-required {
+    color: #ef4444;
+}
+
+.formfree-input,
+.formfree-textarea,
+.formfree-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formfree-input:focus,
+.formfree-textarea:focus,
+.formfree-select:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.formfree-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.formfree-radio-label,
+.formfree-checkbox-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.formfree-radio,
+.formfree-checkbox {
+    margin-right: 8px;
+}
+
+/* Mensajes de error */
+.formfree-error-message {
+    display: none;
+    color: #ef4444;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.formfree-field-group.error .formfree-input,
+.formfree-field-group.error .formfree-textarea,
+.formfree-field-group.error .formfree-select {
+    border-color: #ef4444;
+}
+
+.formfree-field-group.error .formfree-error-message {
+    display: block;
+}
+
+/* Botones */
+.formfree-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.formfree-btn {
+    flex: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.formfree-btn-prev {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.formfree-btn-prev:hover {
+    background: #e5e7eb;
+}
+
+.formfree-btn-next,
+.formfree-btn-submit {
+    background: #10b981;
+    color: white;
+}
+
+.formfree-btn-next:hover,
+.formfree-btn-submit:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+.formfree-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Mensaje de respuesta */
+.formfree-message {
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.formfree-message.success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.formfree-message.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* reCAPTCHA */
+.formfree-recaptcha {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .formfree-wrapper {
+        padding: 20px;
+    }
+
+    .formfree-buttons {
+        flex-direction: column;
+    }
+
+    .formfree-step-dot {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+}

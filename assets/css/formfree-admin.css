@@ -1,0 +1,217 @@
+/* FormFree - Estilos de Administración */
+
+/* BUILDER CONTAINER */
+.formfree-builder-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* TIPOS DE CAMPO */
+.formfree-field-types {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.formfree-field-types h3 {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.formfree-field-types .button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* LISTA DE CAMPOS */
+.formfree-fields-list {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    min-height: 300px;
+}
+
+.formfree-no-fields {
+    color: #646970;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.formfree-field-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: move;
+    transition: all 0.2s ease;
+}
+
+.formfree-field-item:hover {
+    border-color: #2271b1;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.formfree-field-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.formfree-field-header .dashicons {
+    color: #8c8f94;
+    cursor: move;
+}
+
+.formfree-field-header strong {
+    flex: 1;
+    color: #2c3338;
+}
+
+.formfree-field-type-badge,
+.formfree-field-step-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #f0f0f1;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #646970;
+}
+
+.formfree-field-step-badge {
+    background: #d0e6f7;
+    color: #135e96;
+}
+
+.formfree-required-badge {
+    color: #d63638;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.formfree-field-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.formfree-field-placeholder {
+    background: #f0f6fc;
+    border: 2px dashed #2271b1;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* MODAL */
+.formfree-modal {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.formfree-modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.formfree-modal-close {
+    color: #8c8f94;
+    float: right;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.formfree-modal-close:hover,
+.formfree-modal-close:focus {
+    color: #2c3338;
+}
+
+.formfree-modal h2 {
+    margin-top: 0;
+}
+
+/* SHORTCODE BOX */
+.formfree-shortcode-box {
+    background: #f0f6fc;
+    padding: 20px;
+    border: 1px solid #2271b1;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.formfree-shortcode-box input {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.formfree-shortcode-box input:focus {
+    box-shadow: 0 0 0 1px #2271b1;
+}
+
+/* STATS */
+.formfree-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.formfree-stat-card {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.formfree-stat-number {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2271b1;
+}
+
+.formfree-stat-label {
+    font-size: 14px;
+    color: #646970;
+    margin-top: 5px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 782px) {
+    .formfree-builder-container {
+        grid-template-columns: 1fr;
+    }
+
+    .formfree-modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+}
